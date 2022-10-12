@@ -1,15 +1,18 @@
+import React, { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import Button from "./components/Button";
 import Counter from "./components/Counter";
 
-function App() {
+function App({ initialNumClicks = 0 }) {
+    const [numClicks, setNumClicks] = useState(initialNumClicks);
+
     const handleClick = () => {
-        console.log("Clic");
+        setNumClicks(numClicks + 1);
     };
 
     const handleReset = () => {
-        console.log("Reset");
+        setNumClicks(initialNumClicks);
     };
 
     return (
@@ -18,11 +21,11 @@ function App() {
                 <img src={logo} className="App-logo" alt="logo" />
             </header>
             <main className="App-main">
-                <Counter />
-                <Button className="btn-click" onClick={handleClick}>
+                <Counter className="App-counter" number={numClicks} />
+                <Button className="App-button btn-click" onClick={handleClick}>
                     Click
                 </Button>
-                <Button className="btn-reset" onClick={handleReset}>
+                <Button className="App-button btn-reset" onClick={handleReset}>
                     Reset
                 </Button>
             </main>
