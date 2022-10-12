@@ -1,0 +1,32 @@
+.btn {
+    display: inline-block;
+    width: 250px;
+    height: 80px;
+    font-family: Roboto, san-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #f5f6f7;
+    border: 2px solid #f5f6f7;
+    border-radius: 16px;
+    margin: 6px;
+    cursor: pointer;
+    background-color: #0a0a22;
+}
+
+.btn:hover {
+    background-color: #1a1a32;
+}
+
+.btn-click {
+    background-color: #0a1aa2;
+}
+.btn-click:hover {
+    background-color: #1a2ab2;
+}
+
+.btn-reset {
+    background-color: #5a1a62;
+}
+.btn-reset:hover {
+    background-color: #6a2a72;
+}
