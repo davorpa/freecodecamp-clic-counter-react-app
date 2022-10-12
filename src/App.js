@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Button from "./components/Button";
+import Counter from "./components/Counter";
 
 function App() {
     const handleClick = () => {
@@ -17,6 +18,7 @@ function App() {
                 <img src={logo} className="App-logo" alt="logo" />
             </header>
             <main className="App-main">
+                <Counter />
                 <Button className="btn-click" onClick={handleClick}>
                     Click
                 </Button>
