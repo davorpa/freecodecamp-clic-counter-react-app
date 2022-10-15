@@ -8,7 +8,7 @@ function App({ initialNumClicks = 0 }) {
     const [numClicks, setNumClicks] = useState(initialNumClicks);
 
     const handleClick = () => {
-        setNumClicks(numClicks + 1);
+        setNumClicks((value) => value + 1);
     };
 
     const handleReset = () => {
